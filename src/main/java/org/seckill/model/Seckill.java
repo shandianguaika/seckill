@@ -12,7 +12,7 @@ public class Seckill {
 	private String createTime;	//创建时间
 	private String createBy;	//创建人
 	
-	public String getSeckill_id() {
+	public String getSeckill_id() { 
 		return seckill_id;
 	}
 	public void setSeckill_id(String seckill_id) {

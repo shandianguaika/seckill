@@ -4,7 +4,6 @@ import java.util.Date;
 import java.util.List;
 
 import javax.annotation.Resource;
-
 import org.common.enums.Enums;
 import org.common.exception.RepeatKillException;
 import org.common.exception.SeckillCloseException;
@@ -21,6 +20,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 /**
  * 
  * @author 小宇宙
@@ -39,6 +40,7 @@ public class SeckillServiceImpl implements SeckillService {
 	
 	//盐值，用来混淆加密信息
 	private String slat = "qweqwe1212334,,llasd[[]";
+	@RequestMapping(value="",method=RequestMethod.POST,consumes= {""})
 	
 	@Override
 	public List<Seckill> getAll() {
