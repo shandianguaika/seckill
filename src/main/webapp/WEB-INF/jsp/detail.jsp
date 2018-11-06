@@ -10,11 +10,14 @@
   <body>
 	<!-- 页面显示部分 -->
   	<div class="container">
-  	<h2>秒杀商品详细信息</h2>
+  	<div class="panel-heading text-center"><h2>秒杀商品详细信息</h2></div>
   		<div class="panel panel-default">
   			<div class="panel-heading text-center">${seckill.name}</div>
   			<div class="panel-body text-center">
-				
+				<h2 class="text-danger">
+					<span class = "glyphicon glyphicon-time"></span>
+					<span class = "glyphicon" id="seckill-box"></span>
+				</h2>
 			</div>
   		</div>
   	

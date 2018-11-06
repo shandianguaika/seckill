@@ -15,21 +15,30 @@
 	<!-- 1、开启springmvc注解模式 -->
 	<!-- 简化配置： （1）、自动注册DefaultAnnotationHandlerMapping,AnnotationMethodHandlerAdapter 
 		（2）、提供一系列：数据绑定、数字、日期的format @NumberFormat，@DataTimeFormat，xml，json默认读写支持。 -->
-	<mvc:annotation-driven />
+	<mvc:annotation-driven/>
 	<!-- 2、静态资源默认servlet配置
 	（1）、加入对静态资源的处理：js、gif、png等
 	（2）、允许使用“/”做整体映射
 	 -->
 	 <mvc:default-servlet-handler/>
+	 
+	 <!-- <bean id="httpRequestHandlerAdapter" class="org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter" /> 
+	  -->
 	 <!-- 3、配置jsp显示ViewResolver -->
-	 <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-	 	<!-- jstl标签 -->
+	 <!-- <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	 	jstl标签
 	 	<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
-	 	<!-- 前缀 -->
+	 	前缀
 	 	<property name="prefix" value="/WEB-INF/jsp/"/>
-	 	<!-- 后缀 -->
+	 	后缀
 	 	<property name="suffix" value=".jsp"/>
-	 </bean>
+	 </bean> -->
+	 <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
 	 <!-- 4、扫描web层相关的control的注解文件 -->
-	 <context:component-scan base-package="org.seckill.control.*"/>
+	 <context:component-scan base-package="org.seckill.control" />
+	 
 </beans>

@@ -4,19 +4,19 @@ import java.util.Date;
 
 public class Seckill {
 
-	private String seckill_id;	//商品库存id
+	private String seckillId;	//商品库存id
 	private String name;		//商品名称	
 	private int number;			//库存数量
 	private Date startTime;		//秒杀开启时间
 	private Date endTime;		//秒杀结束时间
-	private String createTime;	//创建时间
+	private Date createTime;	//创建时间
 	private String createBy;	//创建人
 	
-	public String getSeckill_id() { 
-		return seckill_id;
+	public String getSeckillId() {
+		return seckillId;
 	}
-	public void setSeckill_id(String seckill_id) {
-		this.seckill_id = seckill_id;
+	public void setSeckillId(String seckillId) {
+		this.seckillId = seckillId;
 	}
 	public String getName() {
 		return name;
@@ -42,10 +42,10 @@ public class Seckill {
 	public void setEndTime(Date endTime) {
 		this.endTime = endTime;
 	}
-	public String getCreateTime() {
+	public Date getCreateTime() {
 		return createTime;
 	}
-	public void setCreateTime(String createTime) {
+	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
 	}
 	public String getCreateBy() {
@@ -56,7 +56,7 @@ public class Seckill {
 	}
 	@Override
 	public String toString() {
-		return "Seckill [seckill_id=" + seckill_id + ", name=" + name + ", number=" + number + ", startTime="
+		return "Seckill [seckill_id=" + seckillId + ", name=" + name + ", number=" + number + ", startTime="
 				+ startTime + ", endTime=" + endTime + ", createTime=" + createTime + ", createBy=" + createBy + "]";
 	}
 

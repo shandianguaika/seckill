@@ -59,8 +59,7 @@ public class SeckillControl {
 	 * @param seckillId
 	 * @return
 	 */
-	@RequestMapping(value = "{seckillId}/getdetail", method = RequestMethod.POST)
-
+	@RequestMapping(value = "{seckillId}/getdetail", method = RequestMethod.GET)
 	public String getDetail(Model model, @PathVariable(name = "seckillId") String seckillId) {
 		if (StringHelper.isNullOrEmpty(seckillId)) {
 			return "redirect:/seckill/getlist";

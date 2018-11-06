@@ -31,13 +31,13 @@
 							<tr>
 								<th>${sk.name}</th>
 								<th>${sk.number}</th>
-								<%-- <th><fmt:formatDate value="${sk.startTime}" pattern="yyyy-MM-dd HH:mm:ss"/></th>
+								<th><fmt:formatDate value="${sk.startTime}" pattern="yyyy-MM-dd HH:mm:ss"/></th>
 								<th><fmt:formatDate value="${sk.endTime }" pattern="yyyy-MM-dd HH:mm:ss"/></th>
-								<th><fmt:formatDate value="${sk.createTime }" pattern="yyyy-MM-dd HH:mm:ss"/></th> --%>
-								<th>${sk.startTime}</th>
+								<th><fmt:formatDate value="${sk.createTime }" pattern="yyyy-MM-dd HH:mm:ss"/></th>
+								<%-- <th>${sk.startTime}</th>
 								<th>${sk.endTime }</th>
-								<th>${sk.createTime }</th>
-								<th><a class="btn btn-info" href="/seckill/${sk.seckill_id }/getdetail" target="_blank">查看</a></th>
+								<th>${sk.createTime }</th> --%>
+								<th><a class="btn btn-info" href="/seckill/seckill/${sk.seckillId }/getdetail" target="_blank">查看</a></th>
 							</tr>
 						</c:forEach>
 					</tbody>
